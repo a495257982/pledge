@@ -9,6 +9,6 @@ func main() {
 
 	cmd := exec.Command("echo", "'helloworld!'")
 	out, _ := cmd.Output()
-	fmt.Println(out)
+	fmt.Println(string(out))
 	fmt.Println("aaa")
 }
