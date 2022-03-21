@@ -7,8 +7,16 @@ import (
 
 func main() {
 
-	cmd := exec.Command("/root/go/src/new_rust/lotus-miner sealing jobs")
-	out, _ := cmd.Output()
-	fmt.Println(string(out))
-	fmt.Println("aaa")
+	shellPath := "test.sh 5"
+	command := exec.Command(shellPath) //初始化Cmd
+	err := command.Start()             //运行脚本
+	if nil != err {
+		fmt.Println(err)
+	}
+	fmt.Println("Process PID:", command.Process.Pid)
+	err = command.Wait() //等待执行完成
+	if nil != err {
+		fmt.Println(err)
+	}
+	fmt.Println("ProcessState PID:", command.ProcessState.Pid())
 }
