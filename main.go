@@ -7,7 +7,7 @@ import (
 
 func main() {
 
-	shellPath := "test.sh 5"
+	shellPath := "/root/go/src/pledge/test.sh 5"
 	command := exec.Command(shellPath) //初始化Cmd
 	err := command.Start()             //运行脚本
 	if nil != err {
