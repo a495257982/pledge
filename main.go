@@ -7,7 +7,7 @@ import (
 
 func main() {
 
-	f, err := exec.Command("./lotus-miner ", "sealing jobs").Output()
+	f, err := exec.Command("/root/go/src/pledge/lotus-miner ", "sealing jobs").Output()
 	if err != nil {
 		fmt.Println(err.Error())
 	}
