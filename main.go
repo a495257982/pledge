@@ -7,9 +7,7 @@ import (
 
 func main() {
 
-	cmdArgs := []string{"/root/go/src/new_rust", "sealing", "jobs"}
-
-	cmd := exec.Command("lotus-miner", cmdArgs...)
+	cmd := exec.Command("lotus-miner", "/root/go/src/new_rust", "--v")
 	//err := cmd.Run()
 	buf, err := cmd.Output()
 	if err != nil {
@@ -18,4 +16,5 @@ func main() {
 	if buf != nil {
 		fmt.Println(string(buf))
 	}
+
 }
