@@ -1,14 +1,15 @@
 package main
 
 import (
-	"log"
+	"fmt"
 	"os/exec"
 )
 
 func main() {
 
-	cmnd := exec.Command("test.sh", "2")
-	//cmnd.Run() // and wait
-	cmnd.Start()
-	log.Println("log")
+	f, err := exec.Command("ls", "/").Output()
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+	fmt.Println(string(f))
 }
