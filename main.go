@@ -7,7 +7,7 @@ import (
 
 func main() {
 
-	cmd := exec.Command("lotus-miner", "/c", "/root/go/src/new_rust", "--v")
+	cmd := exec.Command("lotus-miner", "--v", "/root/go/src/new_rust")
 	//err := cmd.Run()
 	buf, err := cmd.Output()
 	if err != nil {
