@@ -23,4 +23,6 @@ func main() {
 	}
 	fmt.Println("processState PID:", processState.Pid()) //获取PID
 	fmt.Println("ProcessExit:", processState.Exited())   //获取进程是否退出
+	fmt.Println("ProcessExit:", processState.String())
+
 }
