@@ -14,7 +14,7 @@ func main() {
 		fmt.Println(err)
 	}
 	if buf != nil {
-		fmt.Println(buf)
+		fmt.Println(string(buf))
 	}
 
 }
